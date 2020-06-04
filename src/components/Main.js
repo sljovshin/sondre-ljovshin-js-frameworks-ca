@@ -1,4 +1,7 @@
 import React from 'react'
+import Home from './home/Home';
+import Contact from './contact/Contact';
+import Game from './gamedetails/Game';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -9,13 +12,15 @@ import {
     NavLink,
 } from "react-router-dom";
 
+
+
 function Main() {
     return (
         <div>
             <Router>
                 <Navbar bg="dark" variant="dark" expand="lg">
                     <NavLink to="/" exact>
-                        <Navbar.Brand>React-MA3</Navbar.Brand>
+                        <Navbar.Brand>JavaScript Frameworks CS</Navbar.Brand>
                     </NavLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -23,18 +28,17 @@ function Main() {
                             <NavLink to="/" exact className="nav-link">
                                 Home
                             </NavLink>
-                            <NavLink to="/login" className="nav-link">
-                                Login
-                            </NavLink>
-                            <NavLink to="/news" className="nav-link">
-                                News
+                            <NavLink to="/contact" className="nav-link">
+                                Contact
                             </NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
                 <Container className="appWrapper">
                     <Switch>
-
+                        <Route path="/" exact component={Home} />
+                        <Route path="/contact" component={Contact} />
+                        <Route path="/game/:id" component={Game} />
                     </Switch>
                 </Container>
             </Router>
