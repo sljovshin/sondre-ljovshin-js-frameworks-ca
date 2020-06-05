@@ -26,6 +26,7 @@ function GameDetails({data}) {
             <div className="coverImage" style={style.image}></div>
             <h3>About the game:</h3>
             <p>{getDetails(data)}</p>
+            <a href={data.website}>{data.website}</a>
         </div>
     )
 }
