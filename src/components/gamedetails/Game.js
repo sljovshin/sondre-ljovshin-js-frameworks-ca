@@ -24,7 +24,7 @@ export default function Game() {
 
     return (
         <div className="page-wrapper">
-        {loading ? <Loader /> : <GameDetails data={data} />}
-    </div>
+            {loading ? <Loader /> : <GameDetails data={data} />}
+        </div>
     )
 }

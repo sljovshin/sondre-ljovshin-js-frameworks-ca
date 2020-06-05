@@ -21,12 +21,12 @@ function GameDetails({data}) {
 
 
     return (
-        <>
+        <div>
             <Heading title={data.name} />
             <div className="coverImage" style={style.image}></div>
             <h3>About the game:</h3>
             <p>{getDetails(data)}</p>
-        </>
+        </div>
     )
 }
 

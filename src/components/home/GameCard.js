@@ -12,7 +12,6 @@ function GameCard({data}) {
         }
     };
     
-    
 
     return (
         <div className="gameCard" style={style.cardStyle}>
@@ -20,9 +19,11 @@ function GameCard({data}) {
             <div className="coverImage" style={style.coverImage}>
             </div>
             <p>Released {data.released}</p>
-            <p>Rating: {data.rating} / 5</p>
-            <div className="learnMoreBt">
-                <a href={'game/'+data.id}>Learn More</a>
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <p>Rating: {data.rating} / 5</p>
+                <div className="learnMoreBt">
+                    <a href={'game/'+data.id}>Learn More</a>
+                </div>
             </div>
         </div>
     );
