@@ -2,6 +2,7 @@ import React from 'react'
 import Home from './home/Home';
 import Contact from './contact/Contact';
 import Game from './gamedetails/Game';
+import Favourites from './favourites/Favourites';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -31,6 +32,9 @@ function Main() {
                             <NavLink to="/contact" className="nav-link">
                                 Contact
                             </NavLink>
+                            <NavLink to="/fav" className="nav-link">
+                                Favourites
+                            </NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
@@ -39,6 +43,7 @@ function Main() {
                         <Route path="/" exact component={Home} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/game/:id" component={Game} />
+                        <Route path="/fav" component={Favourites} />
                     </Switch>
                 </Container>
             </Router>

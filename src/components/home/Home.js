@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Heading from '../layout/Heading';
-import HomeContent from './HomeContent';
+import GameList from '../layout/GameList';
 import Loader from '../layout/Loader';
 
 function Home() {
@@ -20,7 +20,7 @@ function Home() {
         <>
             <Heading title="Home" />
             <div className="page-wrapper">
-                {loading ? <Loader /> : <HomeContent data={data} />}
+                {loading ? <Loader /> : <GameList data={data} />}
             </div>
         </>
     )
